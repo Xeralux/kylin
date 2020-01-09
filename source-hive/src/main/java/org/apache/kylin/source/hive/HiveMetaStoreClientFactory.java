@@ -22,7 +22,7 @@ import org.apache.hadoop.hive.conf.HiveConf;
 import org.apache.hadoop.hive.metastore.HiveMetaStoreClient;
 import org.apache.hadoop.hive.metastore.IMetaStoreClient;
 import org.apache.hadoop.hive.metastore.api.MetaException;
-import org.apache.hive.hcatalog.common.HCatUtil;
+//import org.apache.hive.hcatalog.common.HCatUtil;
 import org.apache.kylin.common.KylinConfig;
 
 import java.io.IOException;
@@ -45,7 +45,7 @@ public class HiveMetaStoreClientFactory {
         if ("hcatalog".equals(KylinConfig.getInstanceFromEnv().getHiveMetaDataType())) {
             metaStoreClient = new HiveMetaStoreClient(hiveConf);
         } else if ("gluecatalog".equals(KylinConfig.getInstanceFromEnv().getHiveMetaDataType())) {
-            metaStoreClient = HCatUtil.getHiveMetastoreClient(hiveConf);
+//            metaStoreClient = HCatUtil.getHiveMetastoreClient(hiveConf);
         }
         return metaStoreClient;
     }
