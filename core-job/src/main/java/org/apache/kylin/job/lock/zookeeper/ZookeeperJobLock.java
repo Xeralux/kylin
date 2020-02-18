@@ -42,11 +42,6 @@ public class ZookeeperJobLock implements DistributedLock, JobLock {
     }
 
     @Override
-    public boolean globalPermanentLock(String lockPath) {
-        return lock.globalPermanentLock(lockPath);
-    }
-
-    @Override
     public boolean lock(String lockPath, long timeout) {
         return lock.lock(lockPath, timeout);
     }

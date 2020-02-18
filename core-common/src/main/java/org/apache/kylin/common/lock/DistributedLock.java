@@ -39,14 +39,7 @@ public interface DistributedLock {
      * @return If the lock is acquired or not.
      */
     boolean lock(String lockPath);
-
-    /**
-     * Acquire the global permanent lock at given path, non-blocking.
-     * @param lockPath
-     * @return
-     */
-    boolean globalPermanentLock(String lockPath);
-
+    
     /**
      * Acquire the lock at given path, block until given timeout.
      * 
