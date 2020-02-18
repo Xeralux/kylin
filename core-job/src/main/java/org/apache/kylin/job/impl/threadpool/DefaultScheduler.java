@@ -135,6 +135,7 @@ public class DefaultScheduler implements Scheduler<AbstractExecutable> {
         jobLock = lock;
 
         String serverMode = jobEngineConfig.getConfig().getServerMode();
+        logger.info("config: "+jobEngineConfig.getConfig()+", identityHashCode: "+System.identityHashCode(jobEngineConfig.getConfig())+", server mode: " + serverMode);
         if (!("job".equals(serverMode.toLowerCase(Locale.ROOT)) || "all".equals(serverMode.toLowerCase(Locale.ROOT)))) {
             logger.info("server mode: " + serverMode + ", no need to run job scheduler");
             return;
