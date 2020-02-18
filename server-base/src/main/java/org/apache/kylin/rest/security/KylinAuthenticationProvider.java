@@ -120,7 +120,7 @@ public class KylinAuthenticationProvider implements AuthenticationProvider {
 
                 userCache.put(userKey, authed);
             } catch (AuthenticationException e) {
-                logger.error("Failed to auth user: " + authentication.getName(), e);
+                logger.debug("Failed to auth user: " + authentication.getName(), e);
                 throw e;
             }
 
