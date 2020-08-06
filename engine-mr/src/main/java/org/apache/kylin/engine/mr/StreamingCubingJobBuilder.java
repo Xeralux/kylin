@@ -121,7 +121,7 @@ public class StreamingCubingJobBuilder extends JobBuilderSupport {
         mergeDict.setMapReduceParams(cmd.toString());
         mergeDict.setMapReduceJobClass(MergeDictJob.class);
         mergeDict.setLockPathName(cubeName);
-        mergeDict.setIsNeedLock(true);
+        mergeDict.setIsNeedLock(false); //TODO disabling lock due to https://issues.apache.org/jira/browse/KYLIN-4689
         mergeDict.setIsNeedReleaseLock(false);
         mergeDict.setJobFlowJobId(jobFlow.getId());
 
